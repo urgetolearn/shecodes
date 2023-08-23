@@ -1,0 +1,148 @@
+
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Homework - Week 1</title>
+
+  <style>
+    body {
+      font-family: Arial, Helvetica, sans-serif;
+      text-align: center;
+    }
+
+    h1 {
+      color: #1a64d6;
+      font-size: 34px;
+    }
+
+    h2 {
+      font-size: 34px;
+      font-weight: lighter;
+      line-height: 4px;
+    }
+
+    p {
+      color: rgb(90, 90, 90);
+      font-size: 18px;
+      font-family: monospace;
+    }
+
+    div {
+
+      margin: 10px 200px;
+      padding: 10px;
+    }
+
+    div:hover {
+      background-color: rgb(255, 244, 231);
+      transition: all 200ms ease-in-out;
+
+    }
+
+    button {
+      color: #ffffff;
+      font-size: 16px;
+      background-color: #1a64d6;
+      border: 1px solid #1a64d6;
+      border-radius: 30px;
+      padding: 16px 24px;
+      display: block;
+      margin: 0 auto;
+    }
+
+    button:hover {
+      color: #1a64d6;
+      background-color: #ffffff;
+      transition: all 200ms ease-in-out;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <h1>
+    🌤️
+    <br>
+    Currently 21° in Tokyo
+  </h1>
+  <h2>
+    13° /
+    <strong>
+      23°
+    </strong>
+  </h2>
+
+  <div>
+
+    <h3>
+      🌧️Tomorrow
+    </h3>
+
+    <p>
+      10° /
+      <strong>
+        22°
+      </strong>
+    </p>
+  </div>
+
+  <div>
+
+    <h3>
+      🌥️ Saturday
+    </h3>
+
+    <p>
+      15° /
+      <strong>
+        17°
+      </strong>
+    </p>
+  </div>
+
+  <div>
+
+    <h3>
+      ☀️ Sunday
+    </h3>
+
+    <p>
+      25° /
+      <strong>
+        28°
+      </strong>
+    </p>
+  </div>
+
+  <button>
+    Change city
+  </button>
+
+  <p>
+    Coded by Chinmayi D S
+  </p>
+  <script>
+    function temp() {
+        let city = prompt("What city do u live in?");
+        let tempo = prompt("What is the temperature?");
+        let h1 = document.querySelector("h1");
+        if(tempo<0){
+            h1.innerHTML = "☹️" <br> "Currently"+ tempo + "° in" + city;
+        }
+        else{
+            h1.innerHTML = "😄" <br> "Currently"+ tempo + "° in" + city;
+        }
+                
+    }
+    let button = document.querySelector("button");
+    button.addEventListener("click",temp);
+  </script>
+
+</body>
+
+</html>
